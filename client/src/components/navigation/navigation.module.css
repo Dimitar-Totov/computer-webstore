@@ -1,0 +1,62 @@
+.navbar-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #93deff;
+    width: 100%;
+
+    input {
+        border-radius: 1em;
+        border: none;
+        flex-grow: 2;
+        height: 2em;
+        font-size: 1.6em;
+        padding-inline: 0.5em;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .logo-container {
+        margin: 0 auto;
+        .logo {
+            max-width: 15ch;
+        }
+    }
+
+    .links-container {
+        flex-grow: 1;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        .shopping-card {
+            max-width: 8ch;
+
+            &:hover{
+                box-shadow:0 0.5em 1em #2bb5ff;
+                border-radius: 0.9em;
+            }
+        }
+        
+        & > *:not(:last-child){
+            font-size: 1.5em;
+            padding: 0.5em 1.5em;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 900;
+
+            &:hover{
+                background-color: #2bb5ff;
+                border-radius: 0.8em;
+            }
+        }
+    }
+
+
+
+}

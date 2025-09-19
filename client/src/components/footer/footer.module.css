@@ -1,0 +1,29 @@
+.content{
+    background-color: rgb(41, 135, 243);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding-block: 1.5em;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        max-width: 50ch;
+
+        h3{
+            margin-block: 0.6em;
+            color: #fff;
+            font-size: 1.4em;
+        }
+        & >*:not(:first-child){
+            color: #fff;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
