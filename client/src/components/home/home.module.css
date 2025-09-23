@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+PE:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 .main-content {
 
     .feedback {
@@ -84,6 +86,12 @@
             p {
                 margin-bottom: 1em;
                 font-size: 2em;
+                font-family: Comic Neue,sans-serif;
+            }
+
+            &>p {
+                font-family: Alan Sans, sans-serif;
+                font-weight: bold;
             }
 
             .cards {
@@ -91,6 +99,10 @@
                 align-items: start;
                 justify-content: space-between;
                 flex-wrap: wrap;
+
+                a {
+                    text-decoration: none;
+                }
 
                 p {
                     width: 28ch;
@@ -114,12 +126,14 @@
     .best-sellers {
         width: 100%;
         margin: 5rem auto 2rem auto;
-        background-color: #e4f4f9;
+        background-color: #fff;
 
         p {
             font-size: 1.9em;
             padding-top: 2em;
             text-align: center;
+            margin-bottom: 1.3em;
+            font-family: Winky Rough,sans-serif;
         }
 
         .best-sellers-cards {
@@ -127,12 +141,34 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             gap: 1.5em;
+            padding-bottom: 5em;
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                padding-inline: 0.5em;
+                width: 28ch;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                color: #0d7a68;
+                margin-bottom: 2em;
+            }
 
             img {
-                margin-block: 2em;
                 max-width: 60ch;
                 height: 40ch;
-                border-radius: 0.3em;
+                background-color: #fff;
+                background-color: #e4f4f9;
+            }
+
+            &>* {
+                background-color: #e4f4f9;
+                border-radius: 0.4em;
+                overflow: hidden;
             }
         }
     }
