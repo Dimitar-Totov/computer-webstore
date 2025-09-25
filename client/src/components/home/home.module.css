@@ -48,6 +48,11 @@
                 width: 30%;
                 background-color: rgb(72, 160, 237);
                 border-radius: 0.5em;
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                }
 
                 &>* {
                     text-decoration: none;
@@ -55,12 +60,29 @@
                     font-size: 1.5em;
                     width: 100%;
                     padding: 0.3em;
+                    opacity: 0.7;
 
-                    transition: background-color 0.3s ease;
+                    .dropdown-menu {
+                        display: none;
+                        list-style-type: none;
+                        position: absolute;
+                        right: -302px;
+                        top: 0;
+                        border-radius: 0.5em;
+                        background-color: rgb(72, 160, 237);
+                    }
+
 
                     &:hover {
                         background: linear-gradient(to right, #2389E6, #3f8dcd);
-                        border-radius: 0.3em
+                        border-radius: 0.3em;
+                        opacity: 1;
+
+                        .dropdown-menu {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5em;
+                        }
                     }
                 }
             }
@@ -86,7 +108,7 @@
             p {
                 margin-bottom: 1em;
                 font-size: 2em;
-                font-family: Comic Neue,sans-serif;
+                font-family: Comic Neue, sans-serif;
             }
 
             &>p {
@@ -133,7 +155,7 @@
             padding-top: 2em;
             text-align: center;
             margin-bottom: 1.3em;
-            font-family: Winky Rough,sans-serif;
+            font-family: Winky Rough, sans-serif;
         }
 
         .best-sellers-cards {

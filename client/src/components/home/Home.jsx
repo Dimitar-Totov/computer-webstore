@@ -15,7 +15,16 @@ export default function Home() {
                 <div className={style["product-container"]}>
                     <section className={style["products-section"]}>
                         <div className={style["menu"]}>
-                            <NavLink to={"/components-and-storage"}>Components & Storage</NavLink>
+                            <NavLink to={"/components-and-storage"}>
+                                Components & Storage
+                                <ul className={style["dropdown-menu"]}>
+                                    <NavLink to={"/"}><li>CPU/Processor</li></NavLink>
+                                    <NavLink to={"/"}><li>Memory</li></NavLink>
+                                    <NavLink to={"/"}><li>GPU & Video Graphics Device</li></NavLink>
+                                    <NavLink to={"/"}><li>Power Supply</li></NavLink>
+                                    <NavLink to={"/"}><li>Fans & PC Cooling</li></NavLink>
+                                </ul>
+                            </NavLink>
                             <NavLink to={"/computer-systems"}>Computer Systems</NavLink>
                             <NavLink to={"/server-and-components"}>Server & Components</NavLink>
                             <NavLink to={"/electronics"}>Electronics</NavLink>
