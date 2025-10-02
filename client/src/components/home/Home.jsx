@@ -15,17 +15,45 @@ export default function Home() {
                 <div className={style["product-container"]}>
                     <section className={style["products-section"]}>
                         <div className={style["menu"]}>
-                            <NavLink to={"/components-and-storage"}>
+                            <ul className={style["components"]}>
                                 Components & Storage
-                                <ul className={style["dropdown-menu"]}>
-                                    <NavLink to={"/"}><li>CPU/Processor</li></NavLink>
-                                    <NavLink to={"/"}><li>Memory</li></NavLink>
-                                    <NavLink to={"/"}><li>GPU & Video Graphics Device</li></NavLink>
-                                    <NavLink to={"/"}><li>Power Supply</li></NavLink>
-                                    <NavLink to={"/"}><li>Fans & PC Cooling</li></NavLink>
-                                </ul>
-                            </NavLink>
-                            <NavLink to={"/computer-systems"}>Computer Systems</NavLink>
+                                <div className={style["components-dropdown-menu"]}>
+                                    <ul className={style["core-component"]}>
+                                        <h3>Core Component</h3>
+                                        <NavLink to={"/"}><li>CPU / Processor</li></NavLink>
+                                        <NavLink to={"/"}><li>Memory</li></NavLink>
+                                        <NavLink to={"/"}><li>GPU & Video Graphics Device</li></NavLink>
+                                        <NavLink to={"/"}><li>Power Supply</li></NavLink>
+                                        <NavLink to={"/"}><li>Fans & PC Cooling</li></NavLink>
+                                        <NavLink to={"/"}><li>Server Components</li></NavLink>
+                                    </ul>
+
+                                    <ul className={style["storage-device"]}>
+                                        <h3>Storage Device</h3>
+                                        <NavLink to={"/"}><li>Hard Drive</li></NavLink>
+                                        <NavLink to={"/"}><li>SSD</li></NavLink>
+                                        <NavLink to={"/"}><li>Backup Devices & Media</li></NavLink>
+                                        <NavLink to={"/"}><li>USB Flash Drive</li></NavLink>
+                                        <NavLink to={"/"}><li>Network Attached Storage</li></NavLink>
+                                        <NavLink to={"/"}><li>Server Components</li></NavLink>
+                                    </ul>
+
+                                    <ul className={style["accessories"]}>
+                                        <h3>Accessories</h3>
+                                        <NavLink to={"/"}><li>Computer Accessories</li></NavLink>
+                                        <NavLink to={"/"}><li>Power Protection</li></NavLink>
+                                        <NavLink to={"/"}><li>Cable</li></NavLink>
+                                        <NavLink to={"/"}><li>Adapter & Gender Changer</li></NavLink>
+                                        <NavLink to={"/"}><li>KVM Switch</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul className={style["systems"]}>
+                                Computer Systems
+                                <div className={style["systems-dropdown-menu"]}>
+
+                                </div>
+                            </ul>
                             <NavLink to={"/server-and-components"}>Server & Components</NavLink>
                             <NavLink to={"/electronics"}>Electronics</NavLink>
                             <NavLink to={"/gaming-and-vr"}>Gaming & VR</NavLink>
