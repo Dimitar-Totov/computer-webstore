@@ -94,6 +94,7 @@
                     &:hover {
                         .components-dropdown-menu {
                             display: flex;
+                            align-items: start;
                             gap: 1em;
                             right: -966px;
                             top: -23px;
@@ -119,7 +120,95 @@
                     }
                 }
 
+                .systems {
+                    position: relative;
 
+                    .systems-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .systems-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -1090px;
+                            top: -77px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .server-and-components {
+                    position: relative;
+
+                    .server-and-components-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .server-and-components-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -932px;
+                            top: -130px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
 
             }
 

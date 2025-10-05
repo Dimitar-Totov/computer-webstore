@@ -51,10 +51,68 @@ export default function Home() {
                             <ul className={style["systems"]}>
                                 Computer Systems
                                 <div className={style["systems-dropdown-menu"]}>
+                                    <ul className={style["desktop"]}>
+                                        <h3>Desktop</h3>
+                                        <NavLink to={"/"}><li>Desktop Computer</li></NavLink>
+                                        <NavLink to={"/"}><li>Gaming Desktop PC</li></NavLink>
+                                        <NavLink to={"/"}><li>All-in-One Computer</li></NavLink>
+                                        <NavLink to={"/"}><li>Business Desktop</li></NavLink>
+                                    </ul>
 
+                                    <ul className={style["laptop-notebook"]}>
+                                        <h3>Laptop / Notebook</h3>
+                                        <NavLink to={"/"}><li>2-in-1 Laptop</li></NavLink>
+                                        <NavLink to={"/"}><li>Business Laptop</li></NavLink>
+                                        <NavLink to={"/"}><li>Microsoft Surface</li></NavLink>
+                                        <NavLink to={"/"}><li>Touchscreen System</li></NavLink>
+                                    </ul>
+
+                                    <ul className={style["gaming-laptops"]}>
+                                        <h3>Gaming Laptops</h3>
+                                        <NavLink to={"/"}><li>GeForce RTX 50 Series</li></NavLink>
+                                        <NavLink to={"/"}><li>GeForce RTX 40 Series</li></NavLink>
+                                        <NavLink to={"/"}><li>AMD Gaming Laptop</li></NavLink>
+                                        <NavLink to={"/"}><li>Intel Gaming Laptop</li></NavLink>
+                                    </ul>
+
+                                    <ul className={style["tablets"]}>
+                                        <h3>Tablets</h3>
+                                        <NavLink to={"/"}><li>Samsung Galaxy Tab</li></NavLink>
+                                        <NavLink to={"/"}><li>Lenovo Tab</li></NavLink>
+                                        <NavLink to={"/"}><li>Acer Iconia</li></NavLink>
+                                        <NavLink to={"/"}><li>iPad Accessories</li></NavLink>
+                                    </ul>
                                 </div>
                             </ul>
-                            <NavLink to={"/server-and-components"}>Server & Components</NavLink>
+                            <ul className={style["server-and-components"]}>
+                                Server & Components
+                                <div className={style["server-and-components-dropdown-menu"]}>
+                                    <ul className={style["servers-and-workstaitons"]}>
+                                        <h3>Server & Workstations</h3>
+                                        <NavLink to={"/"}><li>IPC / Industrial Systems</li></NavLink>
+                                        <NavLink to={"/"}><li>Server Barebones</li></NavLink>
+                                        <NavLink to={"/"}><li>Server Software</li></NavLink>
+                                        <NavLink to={"/"}><li>Enterprice Storage</li></NavLink>
+                                        <NavLink to={"/"}><li>Server & Workstation Systems</li></NavLink>
+                                    </ul>
+
+                                    <ul className={style["server-components"]}>
+                                        <h3>Server Components</h3>
+                                        <NavLink to={"/"}><li>Server Motherboards</li></NavLink>
+                                        <NavLink to={"/"}><li>Processors - Servers</li></NavLink>
+                                        <NavLink to={"/"}><li>Server Memory</li></NavLink>
+                                        <NavLink to={"/"}><li>Server Chassis</li></NavLink>
+                                    </ul>
+
+                                    <ul className={style["power-protection"]}>
+                                        <h3>Power Protection</h3>
+                                        <NavLink to={"/"}><li>Battery Backup</li></NavLink>
+                                        <NavLink to={"/"}><li>Power Inverters</li></NavLink>
+                                        <NavLink to={"/"}><li>Power Strips</li></NavLink>
+                                        <NavLink to={"/"}><li>Surge Protectors</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
                             <NavLink to={"/electronics"}>Electronics</NavLink>
                             <NavLink to={"/gaming-and-vr"}>Gaming & VR</NavLink>
                             <NavLink to={"/networking"}>Networking</NavLink>
