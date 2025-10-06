@@ -20,5 +20,7 @@ jobs:
         node-version: 20
     - name: Install node modules
       run: npm install
+      working-directory: client
     - name: Execute integration tests
       run: npx playwright test
+      working-directory: client
