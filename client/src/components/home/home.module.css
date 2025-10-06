@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+PE:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+.main-content {
+
+    .feedback {
+        margin-block: 1em;
+        margin-right: 2em;
+        display: flex;
+        gap: 1em;
+        justify-content: end;
+
+        &>* {
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+            color: rgb(131, 129, 129);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &>*:not(:last-child)::after {
+            position: absolute;
+            content: '|';
+            right: -10px;
+        }
+    }
+
+    .product-container {
+        background: linear-gradient(to bottom, #72c9f8, rgba(164, 212, 238, 0));
+        height: 100%;
+
+        .products-section {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            padding-top: 2em;
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                padding: 1.5em 0 1.5em 1.5em;
+                gap: 0.7em;
+                width: 30%;
+                background-color: rgb(72, 160, 237);
+                border-radius: 0.5em;
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                }
+
+                &>* {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 1.5em;
+                    width: 100%;
+                    padding: 0.3em;
+                    opacity: 0.7;
+
+                    &:hover {
+                        background: linear-gradient(to right, #2389E6, #3f8dcd);
+                        border-radius: 0.3em;
+                        opacity: 1;
+
+                        .dropdown-menu {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5em;
+                        }
+                    }
+                }
+
+                .components {
+                    position: relative;
+
+                    .components-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .components-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -966px;
+                            top: -23px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .systems {
+                    position: relative;
+
+                    .systems-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .systems-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -1090px;
+                            top: -77px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .server-and-components {
+                    position: relative;
+
+                    .server-and-components-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .server-and-components-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -932px;
+                            top: -130px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .offers {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: start;
+                gap: 2em;
+
+                img {
+                    max-width: 50ch;
+                    height: 70ch;
+                    border-radius: 0.5em;
+                }
+            }
+        }
+
+        .today-best-deals {
+            width: 70%;
+            margin: 3em auto;
+
+            p {
+                margin-bottom: 1em;
+                font-size: 2em;
+                font-family: Comic Neue, sans-serif;
+            }
+
+            &>p {
+                font-family: Alan Sans, sans-serif;
+                font-weight: bold;
+            }
+
+            .cards {
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                a {
+                    text-decoration: none;
+                }
+
+                p {
+                    width: 28ch;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    color: #0d7a68;
+                }
+
+                img {
+                    max-width: 60ch;
+                    height: 40ch;
+                    border-radius: 0.5em;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+    }
+
+    .best-sellers {
+        width: 100%;
+        margin: 5rem auto 2rem auto;
+        background-color: #fff;
+
+        p {
+            font-size: 1.9em;
+            padding-top: 2em;
+            text-align: center;
+            margin-bottom: 1.3em;
+            font-family: Winky Rough, sans-serif;
+        }
+
+        .best-sellers-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 1.5em;
+            padding-bottom: 5em;
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                padding-inline: 0.5em;
+                width: 28ch;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                color: #0d7a68;
+                margin-bottom: 2em;
+            }
+
+            img {
+                max-width: 60ch;
+                height: 40ch;
+                background-color: #fff;
+                background-color: #e4f4f9;
+            }
+
+            &>* {
+                background-color: #e4f4f9;
+                border-radius: 0.4em;
+                overflow: hidden;
+            }
+        }
+    }
+}
