@@ -13,7 +13,7 @@ export default function Navigation() {
                         </div>
                         <input name="search" type="search" />
                         <div className={style["links-container"]}>
-                            <NavLink to={"/about"}>Catalog</NavLink>
+                            <NavLink to={"/catalog"}>Catalog</NavLink>
                             <NavLink to={"/about"}>About Us</NavLink>
                             <NavLink to={"/register"}>Register</NavLink>
                             <NavLink to={"/login"}>Login</NavLink>
