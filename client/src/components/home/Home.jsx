@@ -4,7 +4,7 @@ import style from './home.module.css'
 
 export default function Home() {
     document.title = 'Home Page';
-
+    
     return (
         <>
             <main className={style["main-content"]}>
