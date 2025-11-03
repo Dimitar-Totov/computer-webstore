@@ -4,7 +4,7 @@ import style from './home.module.css'
 
 export default function Home() {
     document.title = 'Home Page';
-    
+
     return (
         <>
             <main className={style["main-content"]}>
@@ -113,8 +113,69 @@ export default function Home() {
                                     </ul>
                                 </div>
                             </ul>
-                            <NavLink to={"/electronics"}>Electronics</NavLink>
-                            <NavLink to={"/gaming-and-vr"}>Gaming & VR</NavLink>
+                            <ul className={style["electronics"]}>
+                                Electronics
+                                <div className={style["electronics-dropdown-menu"]}>
+                                    <ul className={style["cell-phones"]}>
+                                        <h3>Cell Phones</h3>
+                                        <NavLink to={"#"}><li>Cell Phone Accessories</li></NavLink>
+                                        <NavLink to={"#"}><li>Charges & Cables</li></NavLink>
+                                        <NavLink to={"#"}><li>Power Banks</li></NavLink>
+                                    </ul>
+                                    <ul className={style["tv"]}>
+                                        <h3>TV</h3>
+                                        <NavLink to={"#"}><li>TV & Video</li></NavLink>
+                                        <NavLink to={"#"}><li>Home Video Accessories</li></NavLink>
+                                        <NavLink to={"#"}><li>Audio / Video Cables</li></NavLink>
+                                        <NavLink to={"#"}><li>TV Mounts & Install Accessories</li></NavLink>
+                                    </ul>
+                                    <ul className={style["portable-electronics"]}>
+                                        <h3>Portable Electronics</h3>
+                                        <NavLink to={"#"}><li>Headphones</li></NavLink>
+                                        <NavLink to={"#"}><li>Portable Speakers</li></NavLink>
+                                        <NavLink to={"#"}><li>Digital Cameras</li></NavLink>
+                                        <NavLink to={"#"}><li>Bluetooth Headset & Accessories</li></NavLink>
+                                    </ul>
+                                    <ul className={style["tablets"]}>
+                                        <h3>Tablets</h3>
+                                        <NavLink to={"#"}><li>Tables</li></NavLink>
+                                        <NavLink to={"#"}><li>Android Tablets</li></NavLink>
+                                        <NavLink to={"#"}><li>Window Tablets</li></NavLink>
+                                        <NavLink to={"#"}><li>iPads</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul className={style["gaming-vr"]}>
+                                Gaming & VR
+                                <div className={style["gaming-vr-dropdown-menu"]}>
+                                    <ul className={style["xbox"]}>
+                                        <h3>Xbox</h3>
+                                        <NavLink to={""}><li>Xbox Series X & S Console</li></NavLink>
+                                        <NavLink to={""}><li>Xbox Series X & S Games</li></NavLink>
+                                        <NavLink to={""}><li>Xbox Series X & S Accessories</li></NavLink>
+                                        <NavLink to={""}><li>VR Headsets</li></NavLink>
+                                        <NavLink to={""}><li>VR Accessories</li></NavLink>
+                                        <NavLink to={""}><li>VR Gaming</li></NavLink>
+                                    </ul>
+                                    <ul className={style["playstation"]}>
+                                        <h3>Playstation</h3>
+                                        <NavLink to={""}><li>PS5 Console</li></NavLink>
+                                        <NavLink to={""}><li>PS5 Video Games</li></NavLink>
+                                        <NavLink to={""}><li>PS5 Accessories</li></NavLink>
+                                    </ul>
+                                    <ul className={style["nintendo"]}>
+                                        <h3>Nintendo</h3>
+                                        <NavLink to={""}><li>Switch Console</li></NavLink>
+                                        <NavLink to={""}><li>Switch Video Games</li></NavLink>
+                                        <NavLink to={""}><li>Switch Accessories</li></NavLink>
+                                    </ul>
+                                    <ul className={style["handheld-gaming"]}>
+                                        <h3>Handheld Gaming</h3>
+                                        <NavLink to={""}><li>Handheld Gaming Console</li></NavLink>
+                                        <NavLink to={""}><li>Handheld Gaming Accessories</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
                             <NavLink to={"/networking"}>Networking</NavLink>
                             <NavLink to={"/smart-home-and-security"}>Smart home & Security</NavLink>
                             <NavLink to={"/office-solutions"}>Office Solutions</NavLink>

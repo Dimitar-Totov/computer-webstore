@@ -210,6 +210,95 @@
                     }
                 }
 
+                .electronics {
+                    position: relative;
+
+                    .electronics-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .electronics-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -1224px;
+                            top: -184px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .gaming-vr {
+                    position: relative;
+
+                    .gaming-vr-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .gaming-vr-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -1177px;
+                            top: -237px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
             }
 
             .offers {
