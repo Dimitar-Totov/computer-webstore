@@ -23,10 +23,8 @@ export default function Footer() {
                     </div>
                     <div className={style["company"]}>
                         <h3>COMPANY</h3>
-                        <NavLink to={"/#"}>Award/Rankings</NavLink>
-                        <NavLink to={"/#"}>Careers</NavLink>
-                        <NavLink to={"/#"}>Relations</NavLink>
-                        <NavLink to={"/#"}>About Us</NavLink>
+                        <span>&copy; All rights reserved.</span>
+                        <span>Dimitar's Student App</span>
                     </div>
                 </div>
             </footer>

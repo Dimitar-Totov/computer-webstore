@@ -17,7 +17,17 @@
             color: #fff;
             font-size: 1.4em;
         }
-        & >*:not(:first-child){
+
+        span{
+            font-size: 1.5em;
+            color: darkgrey;
+
+            &:first-of-type{
+                margin-top: 1em;
+            }
+        }
+
+        & >*:not(:first-child):not(span){
             color: #fff;
             text-decoration: none;
 
