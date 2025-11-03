@@ -299,6 +299,231 @@
                         }
                     }
                 }
+
+                .networking {
+                    position: relative;
+
+                    .network-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .network-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -1013px;
+                            top: -100px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .smart-home-and-security {
+                    position: relative;
+
+                    .smart-home-and-security-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .smart-home-and-security-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -620px;
+                            top: -100px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .office-solutions {
+                    position: relative;
+
+                    .office-solutions-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .office-solutions-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -982px;
+                            top: -162px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .software-and-services {
+                    position: relative;
+
+                    .software-and-services-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .software-and-services-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -683px;
+                            top: -262px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .drones {
+                    position: relative;
+
+                    .drones-dropdown-menu {
+                        position: absolute;
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "\e5cc";
+                        position: absolute;
+                        font-family: "Material Icons";
+                        right: 20px;
+                        font-size: 30px;
+                    }
+
+                    &:hover {
+                        .drones-dropdown-menu {
+                            display: flex;
+                            align-items: start;
+                            gap: 1em;
+                            right: -297px;
+                            top: -128px;
+                            background-color: rgb(72, 160, 237);
+                            border-top-right-radius: 0.5em;
+                            border-bottom-right-radius: 0.5em;
+
+                            li {
+                                list-style-type: none;
+                                color: #fff;
+                                padding: 0.4em 0.7em;
+
+                                &:hover {
+                                    background: linear-gradient(to right, #2389E6, #3f8dcd);
+                                }
+                            }
+
+                            h3 {
+                                padding: 0.3em 0.6em;
+                                font-family: Alan Sans, sans-serif;
+                            }
+                        }
+                    }
+                }
             }
 
             .offers {

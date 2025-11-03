@@ -176,11 +176,112 @@ export default function Home() {
                                     </ul>
                                 </div>
                             </ul>
-                            <NavLink to={"/networking"}>Networking</NavLink>
-                            <NavLink to={"/smart-home-and-security"}>Smart home & Security</NavLink>
-                            <NavLink to={"/office-solutions"}>Office Solutions</NavLink>
-                            <NavLink to={"/software-and-services"}>Software & Services</NavLink>
-                            <NavLink to={"/drones"}>Drones</NavLink>
+                            <ul className={style["networking"]}>
+                                Networking
+                                <div className={style["network-dropdown-menu"]}>
+                                    <ul className="home-networking">
+                                        <h3>Home Networking</h3>
+                                        <NavLink to={"#"}><li>Whole Home /Mesh Wifi</li></NavLink>
+                                        <NavLink to={"#"}><li>Modems</li></NavLink>
+                                        <NavLink to={"#"}><li>Routers</li></NavLink>
+                                        <NavLink to={"#"}><li>Range Extenders</li></NavLink>
+                                        <NavLink to={"#"}><li>Wifi & Bluetooth Adapters</li></NavLink>
+                                    </ul>
+                                    <ul className="commercial-networking">
+                                        <h3>Commercial Networking</h3>
+                                        <NavLink to={"#"}><li>Switches</li></NavLink>
+                                        <NavLink to={"#"}><li>Network Interface Cards</li></NavLink>
+                                        <NavLink to={"#"}><li>Hardware Licenses</li></NavLink>
+                                        <NavLink to={"#"}><li>Firewall & Network Security Devices</li></NavLink>
+                                    </ul>
+                                    <ul className="accessories">
+                                        <h3>Accessories</h3>
+                                        <NavLink to={"#"}><li>Network Ethernet Cabels</li></NavLink>
+                                        <NavLink to={"#"}><li>Network Antennas</li></NavLink>
+                                        <NavLink to={"#"}><li>Device Server</li></NavLink>
+                                        <NavLink to={"#"}><li>Power Protection</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul className={style["smart-home-and-security"]}>
+                                Smart home & Security
+                                <div className={style["smart-home-and-security-dropdown-menu"]}>
+                                    <ul className={style["smart-home"]}>
+                                        <h3>Smart Home</h3>
+                                        <NavLink to={"#"}><li>Smart Door Locks & Access</li></NavLink>
+                                        <NavLink to={"#"}><li>Smart Hubs & Kits</li></NavLink>
+                                        <NavLink to={"#"}><li>Smart Sensors & Alarms</li></NavLink>
+                                    </ul>
+                                    <ul className={style["security-cameras"]}>
+                                        <h3>Security Cameras</h3>
+                                        <NavLink to={"#"}><li>IP / Network Cameras</li></NavLink>
+                                        <NavLink to={"#"}><li>Outdoor Security Cameras</li></NavLink>
+                                        <NavLink to={"#"}><li>Video Recorders</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul className={style["office-solutions"]}>
+                                Office Solutions
+                                <div className={style["office-solutions-dropdown-menu"]}>
+                                    <ul className={style["display-printing"]}>
+                                        <h3>Display & Printing</h3>
+                                        <NavLink to={"#"}><li>Printers / Scanners & Supplies</li></NavLink>
+                                        <NavLink to={"#"}><li>Monitor</li></NavLink>
+                                        <NavLink to={"#"}><li>Projectors</li></NavLink>
+                                    </ul>
+                                    <ul className={style["office-technology"]}>
+                                        <h3>Office Technology</h3>
+                                        <NavLink to={"#"}><li>Office Machines</li></NavLink>
+                                        <NavLink to={"#"}><li>Label Makers</li></NavLink>
+                                        <NavLink to={"#"}><li>Scanners</li></NavLink>
+                                        <NavLink to={"#"}><li>Calculators</li></NavLink>
+                                        <NavLink to={"#"}><li>Fax Machines & Copiers</li></NavLink>
+                                    </ul>
+                                    <ul className={style["furniture"]}>
+                                        <h3>Furniture</h3>
+                                        <NavLink to={"#"}><li>Office Furniture</li></NavLink>
+                                        <NavLink to={"#"}><li>Bookcases & Hutches</li></NavLink>
+                                        <NavLink to={"#"}><li>Chair & Accessories</li></NavLink>
+                                        <NavLink to={"#"}><li>Desk Accessories & Organizers</li></NavLink>
+                                        <NavLink to={"#"}><li>Desk & Laptop Stands</li></NavLink>
+                                        <NavLink to={"#"}><li>Gaming Chairs</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul className={style["software-and-services"]}>
+                                Software & Services
+                                <div className={style["software-and-services-dropdown-menu"]}>
+                                    <ul className={style["software"]}>
+                                        <h3>Software</h3>
+                                        <NavLink to={"#"}><li>Operating Systems</li></NavLink>
+                                        <NavLink to={"#"}><li>Office & Accounting</li></NavLink>
+                                        <NavLink to={"#"}><li>Antivirus & Internet Security</li></NavLink>
+                                        <NavLink to={"#"}><li>Audio & Video</li></NavLink>
+                                        <NavLink to={"#"}><li>Photo & Design</li></NavLink>
+                                        <NavLink to={"#"}><li>Server Software</li></NavLink>
+                                        <NavLink to={"#"}><li>Mac Software</li></NavLink>
+                                    </ul>
+                                    <ul className={style["downloadable-software"]}>
+                                        <h3>Downloadable Software</h3>
+                                        <NavLink to={"#"}><li>Operating Systems</li></NavLink>
+                                        <NavLink to={"#"}><li>Office & Accounting</li></NavLink>
+                                        <NavLink to={"#"}><li>Antivirus & Internet Security</li></NavLink>
+                                        <NavLink to={"#"}><li>Photo & Design</li></NavLink>
+                                        <NavLink to={"#"}><li>Mac Application</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul className={style["drones"]}>
+                                Drones
+                                <div className={style["drones-dropdown-menu"]}>
+                                    <ul className={style["drone-accessories"]}>
+                                        <h3>Drone Accessories</h3>
+                                        <NavLink to={"#"}><li>Drone Batteries & Chargers</li></NavLink>
+                                        <NavLink to={"#"}><li>Drone Propellers</li></NavLink>
+                                        <NavLink to={"#"}><li>Drone Cases & Bags</li></NavLink>
+                                    </ul>
+                                </div>
+                            </ul>
                         </div>
                         <div className={style["offers"]}>
                             <NavLink to={"/product"}><img src="https://www.gigabyte.com/FileUpload/Global/KeyFeature/1530/innergigabyteimages/bg1.png" alt="" /></NavLink>
