@@ -18,12 +18,18 @@ const chairs = [
     { chairImage: "https://www.backforce.gg/assets/img/product/blu/EntwickeltMitPros/016_19-08-2019_GamingChair_Stand-Frame_BLUE.png", chairName: "Backforce Chair" },
 ]
 
-//     imageUrl: "https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png",
+const gpu = [
+    { gpuImage: "https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png", gpuName: "GeForce RTX 4060" },
+    { gpuImage: "https://dlcdnwebimgs.asus.com/gain/ce7bd9eb-4f48-46bb-b82f-43dd5def085e/w692", gpuName: "GeForce RTX 3090" },
+    { gpuImage: "https://cdn.hukut.com/GeForce-RTX%C3%A2%C2%84%C2%A2-4070TI-SUPER-EAGLE-OC-16G-Price-in-Nepal-2.png1725442832613", gpuName: "GeForce RTX 4070" },
+    { gpuImage: "https://static.gigabyte.com/StaticFile/Image/Global/fec51e21bd64062ee924ec3c72d7ccff/Product/44240/Png", gpuName: "GeForce RTX 5070" },
+]
 
 export default function Home() {
     document.title = 'Home Page';
     const [monitorIndex, setMonitorIndex] = useState(0);
     const [chairIndex, setChairIndex] = useState(0);
+    const [gpuIndex, setGpuIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -55,8 +61,24 @@ export default function Home() {
         setChairIndex((prev) => (prev - 1 + chairs.length) % chairs.length);
     };
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextGpuCard();
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [gpuIndex]);
+
+    const nextGpuCard = () => {
+        setGpuIndex((prev) => (prev + 1) % gpu.length);
+    };
+
+    const prevGpuCard = () => {
+        setGpuIndex((prev) => (prev - 1 + gpu.length) % gpu.length);
+    };
+
     const { monitorImage, monitorName } = monitors[monitorIndex];
     const { chairName, chairImage } = chairs[chairIndex];
+    const { gpuImage, gpuName } = gpu[gpuIndex];
 
     return (
         <>
@@ -353,7 +375,14 @@ export default function Home() {
                                     <button onClick={nextChairCard}>⮞</button>
                                 </div>
                             </div>
-                            <NavLink to={"/product"}><img src="https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png" alt="" /></NavLink>
+                            <div className={style["gpus"]}>
+                                <NavLink to={"/product"}><img src={gpuImage} alt={gpuName} /></NavLink>
+                                <p>{gpuName}</p>
+                                <div className={style["gpu-arrows"]}>
+                                    <button onClick={prevGpuCard}>⮜</button>
+                                    <button onClick={nextGpuCard}>⮞</button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section className={style["today-best-deals"]}>

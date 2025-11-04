@@ -615,6 +615,43 @@
                         }
                     }
                 }
+
+                .gpus {
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        font-size: 1.7em;
+                        left: 20%;
+                        top: 85%;
+                        font-family: Arimo, sans-serif;
+                        font-style: italic;
+                        color: #000;
+                        text-align: center;
+                    }
+
+                    .gpu-arrows {
+                        top: 50%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        transform: translateY(-50%);
+
+                        button {
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 4em;
+                            cursor: pointer;
+                            transition: transform 0.3s, color 0.3s;
+
+                            &:hover {
+                                color: #00bfff;
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
             }
         }
 
