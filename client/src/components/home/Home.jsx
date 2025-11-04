@@ -4,36 +4,59 @@ import { useEffect, useState } from "react"
 import style from './home.module.css'
 
 const monitors = [
-    {imageUrl: "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1530/innergigabyteimages/bg1.png", monitorName: "Gigabyte Monitor"},
-    {imageUrl: "https://png.pngtree.com/png-vector/20240201/ourmid/pngtree-long-makeup-game-monitor-gaming-scifi-png-image_11530863.png", monitorName: "ACER Nitro Monitor"},
-    {imageUrl: "https://wallpapers.com/images/hd/ultrawide-gaming-monitor-png-4-ohqgzyyok6yt3avf.png", monitorName: "LG Gaming Monitor"},
-    {imageUrl: "https://s3.eu-central-1.amazonaws.com/aoc.production.eu/public/media/2021/10/aoc-u28g2xu-hero-visual-2-big.png", monitorName: "AOC Gaming Monitor"},
-    {imageUrl: "https://5.imimg.com/data5/SELLER/Default/2021/12/IT/FD/MW/142987610/asus-tuf-gaming-vg28uql1a-gaming-monitor-500x500.png", monitorName: "ASUS Gaming Monitor"},
+    { monitorImage: "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1530/innergigabyteimages/bg1.png", monitorName: "Gigabyte Monitor" },
+    { monitorImage: "https://png.pngtree.com/png-vector/20240201/ourmid/pngtree-long-makeup-game-monitor-gaming-scifi-png-image_11530863.png", monitorName: "ACER Nitro Monitor" },
+    { monitorImage: "https://wallpapers.com/images/hd/ultrawide-gaming-monitor-png-4-ohqgzyyok6yt3avf.png", monitorName: "LG Gaming Monitor" },
+    { monitorImage: "https://s3.eu-central-1.amazonaws.com/aoc.production.eu/public/media/2021/10/aoc-u28g2xu-hero-visual-2-big.png", monitorName: "AOC Gaming Monitor" },
+    { monitorImage: "https://5.imimg.com/data5/SELLER/Default/2021/12/IT/FD/MW/142987610/asus-tuf-gaming-vg28uql1a-gaming-monitor-500x500.png", monitorName: "ASUS Gaming Monitor" },
 ]
 
-//  imageUrl: "https://www.games2egypt.com/Images/Products/106624?fileFormat=1",
+const chairs = [
+    { chairImage: "https://www.games2egypt.com/Images/Products/106624?fileFormat=1", chairName: "DXRacer Chair" },
+    { chairImage: "https://purepng.com/public/uploads/large/purepng.com-corsair-t1-race-gaming-chairfurnitureobjectschair-821523993628z2l8z.png", chairName: "Razer Gaming Chair" },
+    { chairImage: "https://www.galax.com/media/catalog/product/cache/14/image/500x500/9df78eab33525d08d6e5fb8d27136e95/d/s/dsc_3719.png", chairName: "Gala Hero Chair" },
+    { chairImage: "https://www.backforce.gg/assets/img/product/blu/EntwickeltMitPros/016_19-08-2019_GamingChair_Stand-Frame_BLUE.png", chairName: "Backforce Chair" },
+]
+
 //     imageUrl: "https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png",
 
 export default function Home() {
     document.title = 'Home Page';
-    const [index, setIndex] = useState(0);
+    const [monitorIndex, setMonitorIndex] = useState(0);
+    const [chairIndex, setChairIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            nextCard();
+            nextMonitorCard();
         }, 3000);
         return () => clearInterval(interval);
-    }, [index]);
+    }, [monitorIndex]);
 
-    const nextCard = () => {
-        setIndex((prev) => (prev + 1) % monitors.length);
+    const nextMonitorCard = () => {
+        setMonitorIndex((prev) => (prev + 1) % monitors.length);
     };
 
-    const prevCard = () => {
-        setIndex((prev) => (prev - 1 + monitors.length) % monitors.length);
+    const prevMonitorCard = () => {
+        setMonitorIndex((prev) => (prev - 1 + monitors.length) % monitors.length);
     };
 
-    const { imageUrl, monitorName} = monitors[index];
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextChairCard();
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [chairIndex]);
+
+    const nextChairCard = () => {
+        setChairIndex((prev) => (prev + 1) % chairs.length);
+    };
+
+    const prevChairCard = () => {
+        setChairIndex((prev) => (prev - 1 + chairs.length) % chairs.length);
+    };
+
+    const { monitorImage, monitorName } = monitors[monitorIndex];
+    const { chairName, chairImage } = chairs[chairIndex];
 
     return (
         <>
@@ -315,14 +338,21 @@ export default function Home() {
                         </div>
                         <div className={style["offers"]}>
                             <div className={style["monitors"]}>
-                                <NavLink to={"/product"}><img src={imageUrl} alt="" /></NavLink>
+                                <NavLink to={"/product"}><img src={monitorImage} alt={monitorName} /></NavLink>
                                 <p>{monitorName}</p>
                                 <div className={style["monitors-arrows"]}>
-                                    <button onClick={prevCard}>⮜</button>
-                                    <button onClick={nextCard}>⮞</button>
+                                    <button onClick={prevMonitorCard}>⮜</button>
+                                    <button onClick={nextMonitorCard}>⮞</button>
                                 </div>
                             </div>
-                            <NavLink to={"/product"}><img src="https://www.games2egypt.com/Images/Products/106624?fileFormat=1" alt="" /></NavLink>
+                            <div className={style["chairs"]}>
+                                <NavLink to={"/product"}><img src={chairImage} alt={chairName} /></NavLink>
+                                <p>{chairName}</p>
+                                <div className={style["chair-arrows"]}>
+                                    <button onClick={prevChairCard}>⮜</button>
+                                    <button onClick={nextChairCard}>⮞</button>
+                                </div>
+                            </div>
                             <NavLink to={"/product"}><img src="https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png" alt="" /></NavLink>
                         </div>
                     </section>
