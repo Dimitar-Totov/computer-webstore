@@ -318,8 +318,8 @@ export default function Home() {
                                 <NavLink to={"/product"}><img src={imageUrl} alt="" /></NavLink>
                                 <p>{monitorName}</p>
                                 <div className={style["monitors-arrows"]}>
-                                    <button className={style["prevArrow"]} onClick={prevCard}>⮜</button>
-                                    <button className={style["nextArrow"]} onClick={nextCard}>⮞</button>
+                                    <button onClick={prevCard}>⮜</button>
+                                    <button onClick={nextCard}>⮞</button>
                                 </div>
                             </div>
                             <NavLink to={"/product"}><img src="https://www.games2egypt.com/Images/Products/106624?fileFormat=1" alt="" /></NavLink>
