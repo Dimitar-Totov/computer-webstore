@@ -1,9 +1,39 @@
 import { NavLink } from "react-router"
+import { useEffect, useState } from "react"
 
 import style from './home.module.css'
 
+const monitors = [
+    {imageUrl: "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1530/innergigabyteimages/bg1.png", monitorName: "Gigabyte Monitor"},
+    {imageUrl: "https://png.pngtree.com/png-vector/20240201/ourmid/pngtree-long-makeup-game-monitor-gaming-scifi-png-image_11530863.png", monitorName: "ACER Nitro Monitor"},
+    {imageUrl: "https://wallpapers.com/images/hd/ultrawide-gaming-monitor-png-4-ohqgzyyok6yt3avf.png", monitorName: "LG Gaming Monitor"},
+    {imageUrl: "https://s3.eu-central-1.amazonaws.com/aoc.production.eu/public/media/2021/10/aoc-u28g2xu-hero-visual-2-big.png", monitorName: "AOC Gaming Monitor"},
+    {imageUrl: "https://5.imimg.com/data5/SELLER/Default/2021/12/IT/FD/MW/142987610/asus-tuf-gaming-vg28uql1a-gaming-monitor-500x500.png", monitorName: "ASUS Gaming Monitor"},
+]
+
+//  imageUrl: "https://www.games2egypt.com/Images/Products/106624?fileFormat=1",
+//     imageUrl: "https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png",
+
 export default function Home() {
     document.title = 'Home Page';
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextCard();
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [index]);
+
+    const nextCard = () => {
+        setIndex((prev) => (prev + 1) % monitors.length);
+    };
+
+    const prevCard = () => {
+        setIndex((prev) => (prev - 1 + monitors.length) % monitors.length);
+    };
+
+    const { imageUrl, monitorName} = monitors[index];
 
     return (
         <>
@@ -284,7 +314,14 @@ export default function Home() {
                             </ul>
                         </div>
                         <div className={style["offers"]}>
-                            <NavLink to={"/product"}><img src="https://www.gigabyte.com/FileUpload/Global/KeyFeature/1530/innergigabyteimages/bg1.png" alt="" /></NavLink>
+                            <div className={style["monitors"]}>
+                                <NavLink to={"/product"}><img src={imageUrl} alt="" /></NavLink>
+                                <p>{monitorName}</p>
+                                <div className={style["monitors-arrows"]}>
+                                    <button className={style["prevArrow"]} onClick={prevCard}>⮜</button>
+                                    <button className={style["nextArrow"]} onClick={nextCard}>⮞</button>
+                                </div>
+                            </div>
                             <NavLink to={"/product"}><img src="https://www.games2egypt.com/Images/Products/106624?fileFormat=1" alt="" /></NavLink>
                             <NavLink to={"/product"}><img src="https://desktop.bg/system/images/404811/normal/msi_geforce_rtx_4060_ti_ventus_3x_8g_oc.png" alt="" /></NavLink>
                         </div>
