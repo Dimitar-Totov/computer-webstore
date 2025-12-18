@@ -80,10 +80,6 @@ export default function Home() {
     const { chairName, chairImage } = chairs[chairIndex];
     const { gpuImage, gpuName } = gpu[gpuIndex];
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/health`)
-        .then(res => res.json())
-        .then(data => console.log(data));
-
     return (
         <>
             <main className={style["main-content"]}>
