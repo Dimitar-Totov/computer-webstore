@@ -6,9 +6,11 @@ const { Pool } = pkg;
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-  origin: "https://computer-webstore.onrender.com"
-}));
+app.use(cors());
+// Do not left this in production, only temporarily
+// app.use(cors({
+//   origin: "https://computer-webstore.onrender.com"
+// }));
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
