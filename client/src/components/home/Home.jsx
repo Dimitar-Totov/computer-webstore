@@ -387,23 +387,32 @@ export default function Home() {
                     </section>
                     <section className={style["today-best-deals"]}>
                         <p>Today's Best Deals</p>
-                        <div className={style["cards"]}>
-                            <NavLink to={"/product"}>
-                                <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/MSI-Cyborg-laptop.png" alt="" />
-                                <p>MSI Cyborg - 15.6" GeForce RTX 4050 Laptop GPU - Intel i7-13620H - 16GB Memory - 512 GB SSD - Windows 11 Home - Gaming Laptops - 144 Hz IPS (A13VE-218US )</p>
-                            </NavLink>
-                            <NavLink to={"/product"}>
-                                <img src="https://assets3.razerzone.com/dWiYYPxIjKjjzjTe2x8nNO_y-Ko=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fheb%2Fh5a%2F9822063231006%2Fbasilisk-v3-pro-35k-white-500x500.png" alt="" />
-                                <p>Razer Basilisk V3 Customizable Ergonomic Gaming Mouse: Fastest Gaming Mouse Switch - Chroma RGB Lighting - 26K DPI Optical Sensor - 11 Programmable Buttons - HyperScroll Tilt Wheel - Classic Black</p>
-                            </NavLink>
-                            <NavLink to={"/product"}>
-                                <img src="https://storage-asset.msi.com/global/picture/image/feature/Gaming-Gear/Combo/gk100-combo/msi-gk100-combo-hotkey-new.png" alt="" />
-                                <p>MSI Forge GK100 Combo – Gaming RGB Keyboard 19-Key Anti-Ghosting, 6400 DPI Optical Sensor, 6-Mode RGB, up to 6,400 DPI, Black</p>
-                            </NavLink>
-                            <NavLink to={"/product"}>
-                                <img src="https://shareefcorner.sa/media/catalog/product/cache/d4cc45832d2a6689466075a3e554546c/t/p/tp-link_archer_c80_wireless_-_black-1.png" alt="" />
-                                <p>TP-Link Archer AX55 WiFi 6 AX3000 Smart WiFi Router - 802.11ax Wireless Router, Gigabit Internet Router, Dual Band, OFDMA, MU-MIMO, OneMesh Compatible</p>
-                            </NavLink>
+                        <div className={style["cardsWrapper"]}>
+                            <div className={style["cards"]}>
+                                {[...Array(2)].flatMap(() => (
+                                    <>
+                                        <NavLink to="/product">
+                                            <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc4/MSI-Cyborg-laptop.png" alt="" />
+                                            <p>MSI Cyborg - 15.6" GeForce RTX 4050...</p>
+                                        </NavLink>
+
+                                        <NavLink to="/product">
+                                            <img src="https://assets3.razerzone.com/dWiYYPxIjKjjzjTe2x8nNO_y-Ko=/300x300/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fheb%2Fh5a%2F9822063231006%2Fbasilisk-v3-pro-35k-white-500x500.png" alt="" />
+                                            <p>Razer Basilisk V3 Customizable...</p>
+                                        </NavLink>
+
+                                        <NavLink to="/product">
+                                            <img src="https://storage-asset.msi.com/global/picture/image/feature/Gaming-Gear/Combo/gk100-combo/msi-gk100-combo-hotkey-new.png" alt="" />
+                                            <p>MSI Forge GK100 Combo...</p>
+                                        </NavLink>
+
+                                        <NavLink to="/product">
+                                            <img src="https://shareefcorner.sa/media/catalog/product/cache/d4cc45832d2a6689466075a3e554546c/t/p/tp-link_archer_c80_wireless_-_black-1.png" alt="" />
+                                            <p>TP-Link Archer AX55 WiFi 6...</p>
+                                        </NavLink>
+                                    </>
+                                ))}
+                            </div>
                         </div>
                     </section>
                 </div>
