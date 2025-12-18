@@ -729,7 +729,12 @@
                     gap: 24px;
                     width: max-content;
                     animation: moveLeft 30s linear infinite;
-                    color: transparent;
+                }
+
+                .cards img {
+                    width: 100%;
+                    height: 160px;
+                    object-fit: contain;
                 }
 
                 .cards:hover {
@@ -767,12 +772,6 @@
                     }
                 }
 
-            }
-
-            .cards img {
-                width: 100%;
-                height: 160px;
-                object-fit: contain;
             }
         }
     }
